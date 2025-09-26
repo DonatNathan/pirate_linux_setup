@@ -22,11 +22,11 @@ log() {
 }
 
 log "${BLUE}=== Purging packages...${NC}" | tee -a $logfile
-apt purge $(awk '{print $1}' packages.list) -y | tee -a $logfile
+sudo apt-get purge $(awk '{print $1}' packages.list) -y | tee -a $logfile
 log "${BLUE}=== Autoremove...${NC}" | tee -a $logfile
-apt autoremove -y | tee -a $logfile
+sudo apt-get autoremove -y | tee -a $logfile
 log "${BLUE}=== Cleaning...${NC}" | tee -a $logfile
-apt clean | tee -a $logfile
+sudo apt-get clean | tee -a $logfile
 log "${GREEN}\n${checkbox} Packages uninstalled.${NC}" | tee -a $logfile
 
 # uninstall_oh_my_zsh | tee -a $logfile
