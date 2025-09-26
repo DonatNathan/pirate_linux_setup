@@ -1,0 +1,5 @@
+Add:
+- VSCode install with extensions
+    - Git Graph
+    - Git Blame
+    - ANSI Colors
