@@ -58,7 +58,8 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 log "${GREEN}${checkbox} Ohmyzsh intalled.${NC}" | tee -a $logfile
 
 # Creating aliases
-echo "\nPirate setup:" >> ~/.zshrc
+echo "" >> ~/.zshrc
+echo "# Pirate setup:" >> ~/.zshrc
 echo "alias c='clear'" >> ~/.zshrc
 
 # Cleaning for performance
